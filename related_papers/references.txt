@@ -1,0 +1,22 @@
+1. **Real Time Classification of Retail Theft Utilizing YOLO Algorithm**
+   - *Focus:* Behavioral anomaly detection using YOLOv8.
+   - *Source:* International Information and Engineering Technology Association (IIETA)
+   - *Relevance:* High. Benchmarks YOLOv8 speed/accuracy in retail.
+
+2. **Retail Theft Detection System Using Yolov8 and Deepsort**
+   - *Focus:* Tracking items to prevent "scan avoidance".
+   - *Source:* IJSREM
+   - *Relevance:* Demonstrates the "tracking" approach vs. your "verification" approach.
+
+3. **Exploring Pose-Based Anomaly Detection for Retail Security**
+   - *Focus:* Using pose estimation to see if a customer *actually* scanned an item.
+   - *Source:* arXiv
+   - *Relevance:* Complementary approach (checking user action vs. checking item identity).
+
+4. **Enhancing Retail Product Recognition using Modified YOLOv8**
+   - *Focus:* Improving recognition of similar-looking products (fine-grained classification).
+   - *Relevance:* Directly related to distinguishing "Maggi Curry" from "Maggi Chicken".
+
+**Search Query for Direct PDFs:**
+- `filetype:pdf "YOLOv8" retail theft detection`
+- `site:arxiv.org "retail checkout" computer vision`

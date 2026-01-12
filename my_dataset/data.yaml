@@ -1,0 +1,13 @@
+train: D:\Robo PSM\my_dataset\train
+val: D:\Robo PSM\my_dataset\valid
+test: D:\Robo PSM\my_dataset\test
+
+nc: 5
+names: ['Maggi', 'Maggi Cukup Rasa', 'Roti', 'Tisu', 'Ubat Gigi']
+
+roboflow:
+  workspace: object-detection-0dvrp
+  project: label-dataset-os02m
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/object-detection-0dvrp/label-dataset-os02m/dataset/2

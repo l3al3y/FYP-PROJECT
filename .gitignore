@@ -1,0 +1,21 @@
+# Virtual Environment
+library/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Database
+*.db
+
+# YOLO/Training Artifacts
+runs/
+
+# Runtime Generated Images
+alerts/
+
+# OS
+.DS_Store
+Thumbs.db
