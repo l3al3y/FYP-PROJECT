@@ -1,5 +1,7 @@
 # Hybrid Self-Checkout System 🛒📷
 
+> **Final Year Project (FYP) submitted for the Bachelor of Computer Engineering degree.**
+
 A smart self-checkout assistant designed to prevent fraud and enhance user experience by cross-referencing barcode scans with real-time computer vision object detection.
 
 ## 🚀 Overview
