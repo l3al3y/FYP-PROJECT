@@ -16,7 +16,7 @@ def check_gpu():
         print(" Training will be FAST.")
         return 0  # 0 is the ID of the first GPU
     else:
-        print("❌ WARNING: GPU NOT DETECTED!")
+        print(" WARNING: GPU NOT DETECTED!")
         print("   The code is trying to run on CPU (Slow).")
         print("   Did you run the 'pip install ... cu121' command?")
         # We return 'cpu' or 0. If you want to force stop, you can exit here.
@@ -37,14 +37,14 @@ def download_and_unzip():
                 for chunk in response.iter_content(chunk_size=8192):
                     f.write(chunk)
         else:
-            print("❌ Download failed.")
+            print(" Download failed.")
             return False
 
     if not os.path.exists(os.path.join(DATASET_DIR, "data.yaml")):
-        print(f"📦 Unzipping...")
+        print(f" Unzipping...")
         with zipfile.ZipFile(zip_path, 'r') as zip_ref:
             zip_ref.extractall(DATASET_DIR)
-        print("✅ Unzip complete.")
+        print(" Unzip complete.")
     
     return True
 
@@ -56,10 +56,10 @@ def main():
     device_to_use = check_gpu()
 
     # 3. Load Model
-    print("\n⬇️ Loading YOLOv8 Nano model...")
+    print("\n Loading YOLOv8 Nano model...")
     model = YOLO('yolov8n.pt') 
 
-    print("🔥 Starting Training...")
+    print(" Starting Training...")
     
     # Get absolute path for config
     data_config_path = os.path.abspath(os.path.join(DATASET_DIR, "data.yaml"))
@@ -75,7 +75,7 @@ def main():
         )
     
         
-    print("\n🎉 TRAINING COMPLETE!")
+    print("\n TRAINING COMPLETE!")
 
 if __name__ == '__main__':
     main()

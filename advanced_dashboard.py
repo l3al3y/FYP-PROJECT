@@ -15,7 +15,7 @@ logging.getLogger("streamlit.runtime.state.session_state_proxy").setLevel(loggin
 try:
     from streamlit.runtime.scriptrunner import get_script_run_ctx
     if get_script_run_ctx() is None:
-        print("❌ ERROR: Please run this script using 'streamlit run advanced_dashboard.py'")
+        print(" ERROR: Please run this script using 'streamlit run advanced_dashboard.py'")
         print("Use: .\\library\\Scripts\\streamlit.exe run advanced_dashboard.py")
         os._exit(1)
 except ImportError:
