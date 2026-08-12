@@ -4,6 +4,10 @@
 
 A smart self-checkout assistant designed to prevent fraud and enhance user experience by cross-referencing barcode scans with real-time computer vision object detection.
 
+## 🎯 Problem Statement
+
+Traditional self-checkout systems rely solely on barcode scanning, making them vulnerable to item switching, missed scans, and deliberate fraud. This project solves that by adding a computer vision layer that visually verifies items.
+
 ## 🚀 Overview
 
 This project implements a hybrid validation system that uses **YOLOv8** to visually identify products on the checkout counter and compares them against scanned barcodes. If an item is detected by the camera but not scanned (or vice-versa), the system flags a potential anomaly.
@@ -13,9 +17,20 @@ Key features:
 - **Fraud Prevention:** Logic to detect "missed scans" or "fake scans" by matching visual counts with scanned counts.
 - **Occlusion Handling:** Experiments with split-view processing to see items from multiple angles.
 
+## 🏗️ Architecture
+
+Camera → YOLOv8 Detection → Cross-Verification Engine → Barcode Scanner Input → MySQL Database → Approval/Alert
+
+## 🔧 Hardware Requirements
+
+- Raspberry Pi 5
+- USB Camera
+- USB Barcode Scanner
+- HDMI Display
+
 ## 📂 Project Structure
 
-```
+```text
 ├── alerts/                     # System alerts and logs
 ├── library/                    # Project-specific library dependencies
 ├── my_dataset/                 # Custom YOLOv8 dataset (Train/Test/Valid)
@@ -41,14 +56,13 @@ Key features:
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-name>
+    git clone https://github.com/l3al3y/FYP-PROJECT.git
+    cd FYP-PROJECT
     ```
 
 2.  **Install Dependencies:**
-    (Ensure you have the necessary libraries installed. A `requirements.txt` generation is recommended if not present).
     ```bash
-    pip install ultralytics opencv-python pandas numpy
+    pip install -r requirements.txt
     ```
 
 3.  **Run the Assistant:**
@@ -61,6 +75,10 @@ Key features:
     ```bash
     python train_system.py
     ```
+
+## 📸 Demo
+
+Screenshots and demo videos coming soon
 
 ## 📊 Model Performance
 
@@ -80,3 +98,7 @@ The project uses a custom dataset (`my_dataset`) structured for YOLOv8, containi
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 👤 Author
+
+Muhammad Irfan Fahmi, Computer Engineering (Hons) UTeM, CCNA, GitHub: l3al3y, Portfolio: l3al3y.github.io/Portfolio
